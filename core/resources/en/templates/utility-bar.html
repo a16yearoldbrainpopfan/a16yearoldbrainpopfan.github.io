@@ -1,0 +1,2287 @@
+<script type="text/html">
+    <div class="utility_bar" id="utility_bar">
+
+        <% if($ !== undefined && $.browser !== undefined && $.browser.msie  && parseInt($.browser.version, 10) === 7){ %>
+            <div style="">Sorry, this browser is no longer supported. Please update your browser.</div>
+        <% }else{ %>
+            <div style="display: none;">
+                <form id="frm_dummy" action="" method="post">
+                    <input type="hidden" name="language" value="en">
+                </form>
+            </div>
+
+            <% if(rc.hide_search!='true'){ %>
+            <div class="search_bar_container utility_bar_containers" id="search_bar_container">
+                <div class="inline_blocks" style="width: 75%;">
+                    <input type="text" id="keyword" class="utility_bar_inputs keyword" style="font-size: 12px; border-radius: 4px 0px 0px 4px;">
+                </div><!--
+                --><div class="inline_blocks" style="">
+                    <a href="#" class="small_button_<%= rc.colorscheme %> utility_bar_small_buttons" id="search_button" style="border-radius: 0px 4px 4px 0px; padding: 0 0.5em;">
+                        <img src="/core/resources/en/images/search_<%= rc.product %>.png" class="buttons_images" border='0'>
+                    </a>
+                </div>
+                <div style="display: none;">
+                    <form name="frm_search" id="frm_search" action="" method="get">
+                        <input type="hidden" id="frm_keyword" name="keyword" />
+                    </form>
+                </div>
+            </div><!--
+            <% }else{ %>
+            <div class="search_bar_container utility_bar_containers" id="search_bar_container"><div class="inline_blocks" style="width: 75%;"></div></div><!--
+            <% } %>
+            <% if(rc.logged_in=='true'){ %>
+                --><div id="usermenu_container" class="utility_bar_containers usermenu_container">
+                    <div class="inline_blocks utility_bar_containers usermenu_container" style="width: 71%;" id="">
+
+                        <% if(rc.mbp=='true' && (core.user.userType()=='teacher' || core.user.userType()=='student')){ %>
+                            <div class="inline_blocks">
+                                <a href="#" class="small_button_<%= rc.colorscheme %> utility_bar_small_buttons" id="myp_button">MY BRAINPOP</a>
+                            </div><!--
+                            --><div class="utility-bar-horizontal-spacer"></div>
+                        <% } %>
+
+                        <div style="text-align: right;" class="inline_blocks">
+                           <a href="#" class="small_button_<%= rc.colorscheme %> enter_code_button utility_bar_small_buttons" id="enter_code_2">Enter code</a>
+                        </div>
+                    </div><!--
+                    --><div class="utility-bar-horizontal-spacer"></div><!--
+                    --><div style="width: 27%;" class="inline_blocks" id="user_menu_element"></div>
+                </div>
+            <% }else{ %>
+                --><div class="log_in_container utility_bar_containers" id="log_in_container">
+                    <% if(rc.product=='brainpopesl'){ %>
+                        <% if(rc.country=='Israel'){ %>
+                        <div class="utility-bar-horizontal-spacer"></div><!--
+                        --><div class="inline_blocks"><a class="LoginMoe" href="https://secure.brainpop.com/he/partners/moe/idp.php?refer=https://esl.brainpop.com"><img src="/partners/moe/moe_button.png"></a></div>
+                        <% } %>
+                    <% } %>
+                    <div class="inline_blocks"><a href="#" class="small_button_<%= rc.colorscheme %> enter_code_button utility_bar_small_buttons" id="enter_code_1">Enter code</a></div><!--
+                    --><div class="utility-bar-horizontal-spacer"></div><!--
+                    --><div class="inline_blocks"><a href="#" class="small_button_<%= rc.colorscheme %> utility_bar_small_buttons" id="login_button"><%= rc.login %></a></div>
+                </div>
+            <% } %>
+            <div style="height: 9px;"></div>
+            <div id="utility-bar-info-panel" class="utility_bar_info_panel_<%= rc.colorscheme %> utility-bar-info-panel">
+
+                <!-- LEARN MORE -->
+                <div id="learn_more" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_learn_more">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.learn_more_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div>
+                                <div class="captions" style="display: inline-block; width: 47%; text-align: left;">
+                                    <%= rc.already_have_my_brainpop_account %>
+                                </div><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><div class="captions" style="display: inline-block; width: 47%; text-align: left;">
+                                    <%= rc.new_to_my_brainpop %>
+                                </div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div>
+                                <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                    <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="learn_more_login" style="width: 100%;"><%= rc.login %></a>
+                                </div><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                    <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="i_am_a_student" style="width: 100%;"><%= rc.i_am_a_student %></a>
+                                </div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div>
+                                <div class="" style="display: inline-block; width: 47%; text-align: center;"></div><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                    <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="i_am_a_teacher" style="width: 100%;"><%= rc.i_am_a_teacher %></a>
+                                </div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- LEARN MORE END -->
+
+                <!-- TEACHER MISSING INFO UPDATED -->
+                <div id="teacher_missing_info_updated" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_missing_info_updated">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div">
+                                <%= rc.teacher_missing_info_updated_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER MISSING INFO UPDATED END -->
+
+                <!-- FLASH DISABLED -->
+                <div id="flash_disabled" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_flash_disabled">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div">
+                                This site requires Flash. Please download and install the latest version of <a href="https://get.adobe.com/flashplayer/" class="generic_links" target="_blank">Adobe Flash Player</a>.
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- FLASH DISABLED END -->
+
+                <!-- SSO MISSING INFO -->
+                <div id="sso_missing_info" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_missing_info">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.sso_missing_info_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="sso_first_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="sso_first_name_missing_error_placeholder" class="error_labels sso_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.sso_first_name_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="sso_last_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="sso_last_name_missing_error_placeholder" class="error_labels sso_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.sso_last_name_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div style="display: none;" id='sso_missing_email_div'>
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="input_divs">
+                                    <input type="text" id="sso_email" class="utility_bar_inputs">
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane">
+                                <div id="sso_email_missing_error_placeholder" class="error_labels sso_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.sso_email_missing_message %></div>
+                                <div id="sso_email_invalid_error_placeholder" class="error_labels sso_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.code_request_invalid_email %></div>
+                            </div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="update_sso_info" style="width: 100%;"><%= rc.submit %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="update_sso_info_failed_error_placeholder" class="error_labels sso_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.sso_update_info_failed_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs" style="text-align: center;">
+                                <a href="http://www.brainpop.com/about/privacy_policy/" target="_blank" class="generic_links" style="width: 100%;"><%= rc.privacy_policy %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- SSO MISSING INFO END -->
+
+                <!-- TEACHER MISSING INFO -->
+                <div id="teacher_missing_info" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_missing_info">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.teacher_missing_info_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="teacher_first_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="teacher_first_name_missing_error_placeholder" class="error_labels teacher_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.teacher_first_name_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="teacher_last_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="teacher_last_name_missing_error_placeholder" class="error_labels teacher_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.teacher_last_name_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="update_teacher_info" style="width: 100%;"><%= rc.submit %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="update_teacher_info_failed_error_placeholder" class="error_labels teacher_missing_info_errors right-pane-error-lables" style="display: none;"><%= rc.update_teacher_info_failed_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs" style="text-align: center;">
+                                <a href="http://www.brainpop.com/about/privacy_policy/" target="_blank" class="generic_links" style="width: 100%;"><%= rc.privacy_policy %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- TEACHER MISSING INFO END -->
+
+                <!-- ORPHAN STUDENT JOINED CLASS -->
+                <div id="orphan_student_joined" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_orphan_student_joined">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div messages_div_<%= rc.colorscheme %>">
+                                <%= rc.orphan_student_joined_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="orphan_student_username" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="orphan_student_username_error_placeholder" class="error_labels frm_orphan_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_student_user_name_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="orphan_student_password" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="orphan_student_password_error_placeholder" class="error_labels frm_orphan_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_student_password_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="orphan_student_login_submit" style="width: 100%; float: left;"><%= rc.login_header %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="orphan_student_login_generic_error_placeholder" class="error_labels frm_orphan_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.student_login_verification_failed_message %></div>
+                            <div id="orphan_student_login_not_student_account_error_placeholder" class="error_labels frm_orphan_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.student_login_not_educator_account_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div" style="text-align: center;">
+                                <%= rc.forgot_password_link %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- ORPHAN STUDENT JOINED CLASS END -->
+
+                <!-- ORPHAN STUDENT -->
+                <div id="orphan_student" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_enter_orphan_student_code">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div orphan_student_message student_messages" style="display: none;">
+                                <%= rc.enter_orphan_student_code_message %>
+                            </div>
+                            <div class="messages_div expired_student_message student_messages" style="display: none;">
+                                <%= rc.enter_expired_student_code_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="orphan_student_code" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="orphan_student_code_missing_error_placeholder" class="error_labels frm_orphan_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_orphan_student_code" style="width: 100%; float: right;"><%= rc.submit %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="orphan_student_code_verification_failed_error_placeholder" class="error_labels frm_orphan_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_verification_failed_message %></div>
+                            <div id="orphan_student_code_verification_failed_not_student_error_placeholder" class="error_labels frm_orphan_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_verification_failed_not_student_message %></div>
+                        </div>
+                    </div>
+
+                    <div id="orphan_studentcode_enrollment_limit_reached_placeholder" class="code_errors" style="display: none;">
+                        <div class="utility-bar-vertical-spacer"></div>
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <div class="error_labels right-pane-error-lables"><%= rc.enrollment_limit_reached_students %></div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- ORPHAN STUDENT END -->
+
+                <!-- ENTER STUDENT CODE -->
+                <div id="enter_student_code" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_enter_student_code">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.enter_student_code_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="student_code" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="student_code_missing_error_placeholder" class="error_labels frm_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="cancel_verify_student_code" style="width: 47%; float: left;"><%= rc.cancel %></a><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_student_code" style="width: 47%; float: right;"><%= rc.verify_code %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="student_code_verification_failed_error_placeholder" class="error_labels frm_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_verification_failed_message %></div>
+                            <div id="student_code_verification_failed_not_student_error_placeholder" class="error_labels frm_student_code_errors right-pane-error-lables" style="display: none;"><%= rc.student_code_verification_failed_not_student_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div style="text-align: center;">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.whats_a_code %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- ENTER STUDENT CODE END -->
+
+                <!-- ENTER EDUCATORS CODE -->
+                <div id="enter_educators_code" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_enter_educators_code">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div id="logged_in_section" style="display: none;" class="enter_educators_code_messages">
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="messages_div">
+                                    <%= rc.enter_educators_code_message %>
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane"></div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+                    </div>
+
+                    <div id="not_logged_in_section" style="display: none;" class="enter_educators_code_messages">
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="messages_div">
+                                    <%= rc.enter_your_new_school_code %>
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane"></div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="educators_code" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="educator_code_missing_error_placeholder" class="error_labels frm_educator_code_errors right-pane-error-lables" style="display: none;"><%= rc.educator_code_missing_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="help_educator_get_code" style="width: 47%; float: left;"><%= rc.help_me_get_my_code %></a><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_educators_code" style="width: 47%; float: right;"><%= rc.verify_code %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="educator_code_verification_failed_error_placeholder" class="error_labels frm_educator_code_errors right-pane-error-lables" style="display: none;"><%= rc.educator_code_verification_failed_message %></div>
+                            <div id="educator_code_verification_failed_not_edu_error_placeholder" class="error_labels frm_educator_code_errors right-pane-error-lables" style="display: none;"><%= rc.educator_code_verification_failed_not_edu_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- ENTER EDUCATORS CODE END -->
+
+                <!-- WHAT'S A CODE -->
+                <div id="whats_a_code" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <!--div class="close_panel inline_blocks" id="close_whats_a_code">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div-->
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.whats_a_code_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="whats_a_code_back" style="width: 100%; float: left;"><img class="back-button" src="/core/resources/en/images/back.png"><%= rc.back %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- WHAT'S A CODE END -->
+
+                <!-- EDUCATOR ACCOUNT STATE -->
+                <div id="educators_account_state" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_educators_account_state">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.educators_account_state %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="verify_educator_username" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="verify_educator_username_error_placeholder" class="error_labels frm_verify_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_educator_user_name_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="verify_educator_password" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="verify_educator_password_error_placeholder" class="error_labels frm_verify_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_educator_password_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="educator_verify_account" style="width: 47%; float: left;"><%= rc.verify_account %></a><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><a href="#" class="buttons button1_<%= rc.colorscheme %>" id="educator_create_account" style="width: 47%; float: right;"><%= rc.register_new %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="verify_educator_login_generic_error_placeholder" class="error_labels frm_verify_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.educator_login_verification_failed_message %></div>
+                            <div id="verify_educator_login_not_educator_account_error_placeholder" class="error_labels frm_verify_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.educator_login_not_educator_account_message %></div>
+                            <div id="accounts_already_linked_error_placeholder" class="error_labels frm_verify_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.accounts_already_linked_error %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- EDUCATOR ACCOUNT STATE END -->
+
+                <!-- STUDENT ACCOUNT STATE -->
+                <div id="student_account_state" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_student_account_state">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div">
+                                <%= rc.student_account_state %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="student_log_in" style="width: 47%; float: left;"><%= rc.login_header %></a><!--
+                                --><div style="width: 6%; display: inline-block;"></div><!--
+                                --><a href="#" class="buttons button1_<%= rc.colorscheme %>" id="student_create_account" style="width: 47%; float: right;"><%= rc.create %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- STUDENT ACCOUNT STATE END -->
+
+                <!-- VERIFY STUDENT LOGIN -->
+                <div id="verify_student_login" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_verify_student_login">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="student_login_message">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div header header_<%= rc.colorscheme %>">
+                                <%= rc.student_login_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer student_login_message"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="student_username" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="student_username_error_placeholder" class="error_labels frm_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_student_user_name_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="student_password" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="student_password_error_placeholder" class="error_labels frm_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_student_password_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_student_login_submit" style="width: 100%; float: left;"><%= rc.login_header %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="student_login_generic_error_placeholder" class="error_labels frm_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.student_login_verification_failed_message %></div>
+                            <div id="student_login_not_student_account_error_placeholder" class="error_labels frm_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.student_login_not_educator_account_message %></div>
+                            <div id="student_link_no_room_error_placeholder" class="error_labels frm_student_login_errors right-pane-error-lables" style="display: none;"><%= rc.student_link_no_room_error_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div" style="text-align: center;">
+                                <span class="verify_student_login_sso_excluded"><%= rc.student_new_to_my_brainpop %>&nbsp;&middot;&nbsp;</span><%= rc.forgot_password_link %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div id="code_enrollment_limit_reached_students_placeholder" class="right-pane-error-lables" style="display: none;">
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="error_labels" style="text-align: left;">
+                                    <%= rc.enrollment_limit_reached_students %>
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane"></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- VERIFY STUDENT LOGIN END -->
+
+                <!-- VERIFY EDUCATOR LOGIN -->
+                <div id="verify_educator_login" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_verify_educator_login">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div id="verify_educator_sso_provisoned" style="display: none;">
+                        <div id='educator_token_step1'>
+                            <div class="">
+                                <div class="panel-left-pane"></div><!--
+                                --><div class="panel-center-pane">
+                                    <div class="messages_div">
+                                        <span style="" id="before_sending_user_token"><%= rc.edcuator_verify_login_sso_provisioned_message %></span>
+                                    </div>
+                                </div><!--
+                                --><div class="panel-right-pane"></div>
+                            </div>
+
+                            <div class="utility-bar-vertical-spacer"></div>
+
+                            <div class="">
+                                <div class="panel-left-pane"></div><!--
+                                --><div class="panel-center-pane">
+
+                                    <div class="" style="display: inline-block; width: 47%; text-align: center; vertical-align: top;">
+                                        <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="send_educator_token_not_now" style="width: 100%;"><%= rc.not_now %></a>
+                                    </div><!--
+                                    --><div style="width: 6%; display: inline-block;"></div><!--
+                                    --><div class="" style="display: inline-block; width: 47%; text-align: center; vertical-align: top;">
+                                        <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="send_educator_token" style="width: 100%; float: left;"><%= rc.send_token %></a>
+                                    </div>
+                                </div><!--
+                                --><div class="panel-right-pane"></div>
+                            </div>
+                        </div>
+
+                        <div id='educator_token_step2' style='display: none;'>
+                            <div class="">
+                                <div class="panel-left-pane"></div><!--
+                                --><div class="panel-center-pane">
+                                    <div class="messages_div">
+                                        <span id="after_sending_user_token"><%= rc.edcuator_verify_login_sso_provisioned_message2 %></span>
+                                    </div>
+                                </div><!--
+                                --><div class="panel-right-pane"></div>
+                            </div>
+
+                            <div class="utility-bar-vertical-spacer"></div>
+
+                            <div class="standard_input_div_entry">
+                                <div class="panel-left-pane"></div><!--
+                                --><div class="panel-center-pane">
+                                    <div class="input_divs">
+                                        <input type="text" id="educator_token" class="utility_bar_inputs">
+                                    </div>
+                                </div><!--
+                                --><div class="panel-right-pane">
+                                    <div id="educator_token_error_placeholder" class="error_labels frm_educator_token_errors right-pane-error-lables" style="display: none;"><%= rc.missing_educator_token_message %></div>
+                                </div>
+                            </div>
+
+                            <div class="utility-bar-vertical-spacer"></div>
+
+                            <div class="">
+                                <div class="panel-left-pane"></div><!--
+                                --><div class="panel-center-pane">
+
+                                    <div class="" style="display: inline-block; width: 47%; text-align: center; vertical-align: top;">
+                                        <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="verify_educator_token_not_now" style="width: 100%;"><%= rc.not_now %></a>
+                                    </div><!--
+                                    --><div style="width: 6%; display: inline-block;"></div><!--
+                                    --><div class="" style="display: inline-block; width: 47%; text-align: center; vertical-align: top;">
+                                        <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_educator_token" style="width: 100%; float: left;"><%= rc.verify_token %></a>
+                                    </div>
+                                </div><!--
+                                --><div class="panel-right-pane">
+                                    <div id="educator_login_token_error_placeholder" class="error_labels frm_educator_token_errors right-pane-error-lables" style="display: none;"><%= rc.educator_token_verification_failed_message %></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="verify_educator_non_sso_provisoned" style="display: none;">
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="messages_div">
+                                    <%= rc.edcuator_login_message %>
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane"></div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+
+                        <div class="standard_input_div_entry">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="input_divs">
+                                    <input type="text" id="educator_username" class="utility_bar_inputs">
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane">
+                                <div id="educator_username_error_placeholder" class="error_labels frm_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_educator_user_name_message %></div>
+                            </div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+
+                        <div class="standard_input_div_entry">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="input_divs">
+                                    <input type="password" id="educator_password" class="utility_bar_inputs">
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane">
+                                <div id="educator_password_error_placeholder" class="error_labels frm_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_educator_password_message %></div>
+                            </div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+
+                        <div class="">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="input_divs">
+                                    <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_educator_login_submit" style="width: 100%; float: left;"><%= rc.login_header %></a>
+                                </div>
+                            </div><!--
+                            --><div class="panel-right-pane">
+                                <div id="educator_login_generic_error_placeholder" class="error_labels frm_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.educator_login_verification_failed_message %></div>
+                                <div id="educator_login_not_educator_account_error_placeholder" class="error_labels frm_educator_login_errors right-pane-error-lables" style="display: none;"><%= rc.educator_login_not_educator_account_message %></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- VERIFY EDUCATOR LOGIN END -->
+
+                <!-- VERIFY SCHOOL LOGIN -->
+                <div id="verify_school_login" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_verify_school_login">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div" id="school_cred_verification_message" style="display: none;">
+                                <%= rc.school_cred_verification_message %>
+                                <div class="utility-bar-vertical-spacer"></div>
+                            </div>
+                            <div class="messages_div" id="school_cred_help_message" style="display: none;">
+                                <%= rc.school_cred_help_message %>
+                                <div class="utility-bar-vertical-spacer"></div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="school_username" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="school_username_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_school_user_name_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="school_password" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="school_password_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_school_password_message %></div>
+                            <div id="login_wrong_school_password_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.login_bad_login_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="verify_school_login_submit" style="width: 100%; float: left;"><%= rc.login_header %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="school_login_generic_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.school_login_verification_failed_message %></div>
+                            <div id="school_expired_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.school_expired_message %></div>
+                            <div id="school_login_not_school_account_error_placeholder" class="error_labels frm_school_login_errors right-pane-error-lables" style="display: none;"><%= rc.school_login_not_school_account_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- VERIFY SCHOOL LOGIN END -->
+
+                <!-- HELP EDUCATOR GET CODE STEP 2 -->
+                <div id="help_educator_get_code_step2" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_help_educator_get_code_step2">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="messages_div messages_div_<%= rc.colorscheme %>">
+                                <%= rc.request_school_contact_for_educator_code_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="code_request_first_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="code_request_first_name_error_placeholder" class="error_labels code_request_errors right-pane-error-lables" style="display: none;"><%= rc.code_request_missing_first_name %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="code_request_last_name" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="code_request_last_name_error_placeholder" class="error_labels code_request_errors right-pane-error-lables" style="display: none;"><%= rc.code_request_missing_last_name %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="code_request_email" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="code_request_email_error_placeholder" class="error_labels code_request_errors right-pane-error-lables" style="display: none;"><%= rc.code_request_missing_email %></div>
+                            <div id="code_request_invalid_email_error_placeholder" class="error_labels code_request_errors right-pane-error-lables" style="display: none;"><%= rc.code_request_invalid_email %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="code_request_send" style="width: 100%; float: left;"><%= rc.send %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- HELP EDUCATOR GET CODE STEP 2 END -->
+
+                <!-- HELP EDUCATOR GET CODE STEP 3 -->
+                <div id="help_educator_get_code_step3" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_help_educator_get_code_step3">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="lefty panel-center-pane2">
+                            <div class="messages_div messages_div_<%= rc.colorscheme %>">
+                                <%= rc.request_school_contact_for_educator_code_sent_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- HELP EDUCATOR GET CODE STEP 3 END  -->
+
+                <!-- EDUCATOR ALREADY LINKED TO THIS PARENT -->
+                <div id="educators_already_linked_to_parent" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_educators_already_linked_to_parent">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="lefty panel-center-pane2">
+                            <div class="messages_div">
+                                <%= rc.educators_already_linked_to_parent %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- EDUCATOR ALREADY LINKED TO THIS PARENT  -->
+
+                <!-- STUDENT JOINED CLASS -->
+                <div id="student_joined_class" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_student_joined_class">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="centerd panel-center-pane2">
+                            <div class="messages_div messages_div_<%= rc.colorscheme %>">
+                                <%= rc.student_joined_class_message %><span style="display: none;" id="relogin_4_changes_to_take_place"> <%= rc.relogin_4_changes %></span>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- STUDENT JOINED CLASS END -->
+
+                <!-- PREMIUM UNKNOWN SUBSCRIPTION -->
+                <div id="premium_unknown_subscription" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks close_for_session" id="close_premium_unknown_subscription">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="centerd panel-center-pane2">
+                            <div class="messages_div">
+                                <%= rc.premium_unknown_subscription_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- PREMIUM UNKNOWN SUBSCRIPTION END -->
+
+                <!-- TEACHER UNLINKED -->
+                <div id="teacher_unlinked" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_unlinked">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 lefty">
+                            <div class="messages_div">
+                                <%= rc.teacher_unlinked_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER UNLINKED END -->
+
+                <!-- TEACHER UNLINKED WITH HISTORY -->
+                <div id="teacher_unlinked_with_history" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_unlinked_with_history">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 lefty">
+                            <div class="messages_div">
+                                <%= rc.teacher_unlinked_with_history_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER UNLINKED WITH HISTORY END -->
+
+                <!-- TEACHER LINKED BASIC -->
+                <div id="teacher_linked_basic" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_linked_basic">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="lefty panel-center-pane2">
+                            <div class="messages_div">
+                                <%= rc.teacher_linked_basic_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER LINKED BASIC END -->
+
+                <!-- LOGIN DIALOG -->
+                <div id="login" class="login_form_container panel_containers" style="display: none;">
+
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_login">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <% if(rc.admin_request_login===true){ %>
+                        <div class="standard_input_div_entry">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <%= rc.admin_request_login_message %>
+                            </div><!--
+                            --><div class="panel-right-pane">
+                            </div>
+                        </div>
+                        <div class="utility-bar-vertical-spacer"></div>
+                    <% } %>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="username" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="username_error_placeholder" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_user_name_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="password" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="password_error_placeholder" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.missing_password_message %></div>
+                            <div id="login_bad_login_error_placeholder" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.login_bad_login_message %></div>
+                            <div id="subscription_has_no_access_to_product" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.subscription_has_no_access_to_product_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="perform_login" style="width: 100%;"><%= rc.login %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="login_generic_error_placeholder" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.login_failed_message %></div>
+                            <div id="activation_email_resent_placeholder" class="update_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.activation_email_resent_message %></div>
+                            <div id="login_not_an_indi_account_error_placeholder" class="error_labels frm_login_errors right-pane-error-lables" style="display: none;"><%= rc.login_not_an_indi_account_error_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane"style="text-align: center;">
+                            <% if(rc.admin_request_login===true){ %>
+                                <%= rc.need_help_loging_in_admin_version %>
+                            <% }else{ %>
+                                <%= rc.need_help_loging_in %>
+                            <% } %>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+
+                    <div style="display: none;">
+                        <form id="frm_login" name="frm_login" action="/user/loginDo.weml"  method="post">
+                            <input type="hidden" id="frm_username" name="username" />
+                            <input type="hidden" id="frm_password" name="password" />
+                            <input type="hidden" id="frm_sso_id" name="sso_id" />
+                            <input type="hidden" id="frm_sso_type" name="sso_type" />
+                            <input type="hidden" id="frm_refer" name="refer" value="<%= rc.refer %>" />
+                        </form>
+                    </div>
+                </div>
+                <!-- LOGIN DIALOG END -->
+
+                <!-- ENTER CODE -->
+                <div id="enter_code" class="code_form_container panel_containers" style="display: none;">
+
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_enter_code">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div style='display: none;' id='student_additional_message'>
+                        <div class="standard_input_div_entry">
+                            <div class="panel-left-pane"></div><!--
+                            --><div class="panel-center-pane">
+                                <div class="messages_div"><%= rc.enter_code_student_additionl_message %></div>
+                            </div><!--
+                            --><div class="panel-right-pane"></div>
+                        </div>
+                        <div class="utility-bar-vertical-spacer"></div>
+                    </div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="text" id="code" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="code_missing_error_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.missing_code_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="standard_input_div_entry">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="validate_code" style="width: 100%;"><%= rc.submit %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="code_error_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.bad_code %></div>
+                            <div id="code_not_eligible_error_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.class_code_not_eligible %></div>
+                            <div id="code_reused_error_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_reused_error %></div>
+                            <div id="code_expired_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_expired_error %></div>
+                            <div id="code_account_expired_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_account_expired_error %></div>
+                            <div id="code_archived_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_archived_error %></div>
+                            <div id="code_not_class_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_not_class_error %></div>
+                            <div id="code_not_school_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_not_school_error %></div>
+                            <div id="code_mybp_disabled" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.code_mybp_disabled %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div id="student_additional_links" style='display: none;'>
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane" style="text-align: center;">
+                            <%= rc.sso_i_dont_have_a_code %>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div id="generic_additional_links" style='display: none;'>
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane" style="text-align: center;">
+                            <%= rc.whats_a_code_generic %>
+                            <% if(rc.sso_action==='auto_create_student' || rc.sso_action==='auto_create_unknown' || rc.sso_action==='fake_unknown'){ %>
+                                <%= rc.enter_code_later_link %>
+                            <% } %>
+                        </div><div id="code_enrollment_limit_reached_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.enrollment_limit_reached %></div><div id="class_code_enrollment_limit_reached_placeholder" class="error_labels code_errors right-pane-error-lables" style="display: none;"><%= rc.enrollment_limit_reached_students %></div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- ENTER CODE END -->
+
+                <!-- ERROR IN PROCESS -->
+                <div id="error_in_process" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_error_in_process">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div">
+                                <%= rc.error_in_process %>
+                                <div id="error_info_div" style="display: none;">
+                                    State: <span id="error_state"></span>, Message: <span id="error_message"></span>
+                                </div>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- ERROR IN PROCESS -->
+
+                <!-- EDUCATOR ACCOUNT LINKED -->
+                <div id="edu_account_linked" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_edu_account_linked">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div messages_div_<%= rc.colorscheme %>">
+                                <%= rc.edu_account_linked_message %>
+                            </div>
+                            <div class="messages_div" id="edu_account_linked_relogin_message" style="display: none;">
+                                <div class="utility-bar-vertical-spacer"></div>
+                                <%= rc.edu_account_linked_relogin_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- EDUCATOR ACCOUNT LINKED -->
+
+                <!-- STUDENT GAME LOGIN OFFER -->
+                <div id="student_game_login_offer" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_student_game_login_offer">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div">
+                                <%= rc.student_log_in_to_game_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- STUDENT GAME LOGIN OFFER END -->
+
+                <!-- STUDENT QUIZ LOGIN OFFER -->
+                <div id="student_quiz_login_offer" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_student_quiz_login_offer">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="">
+                        <div class="panel-left-pane2"></div><!--
+                        --><div class="panel-center-pane2 centerd">
+                            <div class="messages_div">
+                                <%= rc.student_log_in_to_quiz_message %>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane2"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- STUDENT QUIZ LOGIN OFFER END -->
+
+                <!-- TEACHER BASIC MY BRAINPOP -->
+                <div id="teacher_basic_my_brainpop" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_basic_my_brainpop">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="panel-center-pane2 centerd">
+                        <div class="messages_div">
+                            <%= rc.teacher_basic_mybp_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER BASIC MY BRAINPOP END -->
+
+                <!-- TEACHER EXPIRED -->
+                <div id="teacher_expired" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_teacher_expired">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="panel-center-pane2 lefty">
+                        <div class="messages_div">
+                            <%= rc.teacher_expired_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER EXPIRED END -->
+
+                <!-- GENERIC EXPIRED -->
+                <div id="generic_expired" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_generic_expired">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="lefty panel-center-pane2">
+                        <div class="messages_div">
+                            <%= rc.generic_expired_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- GENERIC EXPIRED END -->
+
+                <!-- STUDENT EXPIRED -->
+                <div id="student_expired" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_student_expired">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="lefty panel-center-pane2">
+                        <div class="messages_div">
+                            <%= rc.student_expired_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- STUDENT EXPIRED END -->
+
+                <!-- STUDENT CODE HELP -->
+                <div id="student_code_help" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <!--div class="close_panel inline_blocks" id="close_student_code_help">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div-->
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="lefty panel-center-pane2">
+                        <div class="messages_div">
+                            <%= rc.student_code_help_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="student_help_get_code_back_button" style="width: 100%; float: left;"><img class="back-button" src="/core/resources/en/images/back.png"><%= rc.back %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- STUDENT CODE HELP END -->
+
+                <!-- TEACHER CODE HELP -->
+                <div id="teacher_code_help" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <!--div class="close_panel inline_blocks" id="close_teacher_code_help">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div-->
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="lefty panel-center-pane2">
+                        <div class="messages_div">
+                            <%= rc.teacher_code_help_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="teacher_help_get_code_back_button" style="width: 100%; float: left;"><img class="back-button" src="/core/resources/en/images/back.png"><%= rc.back %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane"></div>
+                    </div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- TEACHER CODE HELP END -->
+
+                <!-- CHANGE PASSWORD -->
+                <div id="change_password" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_change_password">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.change_password_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="change_password_p1" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="change_password_p1_missing_placeholder" class="error_labels change_password_errors right-pane-error-lables" style="display: none;"><%= rc.missing_password_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <input type="password" id="change_password_p2" class="utility_bar_inputs">
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="change_password_p2_missing_placeholder" class="error_labels change_password_errors right-pane-error-lables" style="display: none;"><%= rc.missing_password2_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="">
+                        <div class="panel-left-pane"></div><!--
+                        --><div class="panel-center-pane">
+                            <div class="input_divs">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="update_password" style="width: 100%;"><%= rc.update %></a>
+                            </div>
+                        </div><!--
+                        --><div class="panel-right-pane">
+                            <div id="change_password_password_mismatch_placeholder" class="error_labels change_password_errors right-pane-error-lables" style="display: none;"><%= rc.password_mismatch_message %></div>
+                            <div id="change_password_error_placeholder" class="error_labels change_password_errors right-pane-error-lables" style="display: none;"><%= rc.change_password_error_message %></div>
+                        </div>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- CHANGE PASSWORD END -->
+
+                <!-- CHANGED PASSWORD -->
+                <div id="changed_password" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_changed_password">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.changed_password_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- CHANGED PASSWORD END -->
+
+                <!-- MY BRAINPOP OFFER -->
+                <div id="mbp_offer" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_mbp_offer">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.mbp_offer %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 36%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="myp_offer_login" style="width: 100%; float: left;"><%= rc.yes_log_in %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 58%; text-align: center;">
+                                <% if(rc.already_linked==='true'){ %>
+                                    <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="myp_offer_use_school_account" style="width: 100%; float: right;"><%= rc.no_use_school_account %></a>
+                                <% }else{ %>
+                                    <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="myp_offer_register" style="width: 100%; float: right;"><%= rc.no_sign_up %></a>
+                                <% } %>
+                            </div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+                        <% if(rc.already_linked!=='true'){ %>
+                        <div>
+                            <div class="" style="display: inline-block; width: 36%; text-align: center;">
+
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 58%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="myp_offer_use_school_account" style="width: 100%; float: right;"><%= rc.no_use_school_account %></a>
+                            </div>
+                        </div>
+                        <% } %>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- MY BRAINPOP OFFER END -->
+
+                <!-- REGISTER AS -->
+                <div id="register_as" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_register_as">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.register_as %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="register_as_teacher" style="width: 100%; float: left;"><%= rc.as_teacher %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="register_as_student" style="width: 100%; float: right;"><%= rc.as_student %></a>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- REGISTER AS END -->
+
+                <!-- MY_BRAINPOP -->
+                <div id="my_brainpop" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_my_brainpop">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="mbp_items_div<% if(rc.admin!='true'){ %> mbp_items_div_fixed<% } %>">
+                        <% if(rc.admin=='true'){ %>
+                        <a href="/my-brainpop/school-dashboard/" class="my_brainpop_panel_links">
+                        <div class="mbp_item_div mbp_item_div_<%= rc.product %>" style="" id="admin_dashboard">
+                            <div class="mbp-icons-container">
+                                <img class="my-brainpop-icons" src="/core/resources/en/images/my-brainpop-school-dashboard-<%= rc.product %>.png" border='0'>
+                            </div>
+                            <div class="mbp_txt_item_div mbp_txt_item_div_<%= rc.product %>">
+                                ADMIN DASHBOARD
+                            </div>
+                        </div></a><% } %><!--
+                        --><a href="/my-brainpop/" class="my_brainpop_panel_links <% if(rc.admin!='true'){ %> mbp_item_div_fixed<% } %>"><div class="mbp_item_div mbp_item_div_<%= rc.product %>" id="teacher-classes">
+                            <div class="mbp-icons-container">
+                                <img class="my-brainpop-icons" src="/core/resources/en/images/my-brainpop-my-classes-<%= rc.product %>.png" border='0'>
+                            </div>
+                            <div class="mbp_txt_item_div mbp_txt_item_div_<%= rc.product %>">
+                                MY CLASSES
+                            </div>
+                        </div></a><!--
+                        --><% if(rc.mixer=='true'){ %>
+                        <a href="/mixer/" class="my_brainpop_panel_links <% if(rc.admin!='true'){ %> mbp_item_div_fixed<% } %>"><div class="mbp_item_div mbp_item_div_<%= rc.product %>" style="" id="teacher-quizzes">
+                            <div class="mbp-icons-container">
+                                <img class="my-brainpop-icons" src="/core/resources/en/images/my-brainpop-my-quizzes-<%= rc.product %>.png" border='0'>
+                            </div>
+                            <div class="mbp_txt_item_div mbp_txt_item_div_<%= rc.product %>">
+                                QUIZ MIXER
+                            </div>
+                        </div></a><% } %>
+                    </div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- MY_BRAINPOP END -->
+
+                <!-- IE8 MESSAGE -->
+                <div id="ie8_message" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks close_for_session" id="close_ie8_message">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane2"></div><!--
+                    --><div class="lefty panel-center-pane2">
+                        <div class="messages_div">
+                            <%= rc.ie8_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane2"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- IE8 MESSAGE END -->
+
+                <!-- EDUCATORS RELINK CONFIRMATION -->
+                <div id="educators_relink_confirmation" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_educators_relink_confirmation">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.educators_relink_confirmation_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="relink_close" style="width: 100%; float: left;"><%= rc.close %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="relink_approve" style="width: 100%; float: right;"><%= rc.next %></a>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- EDUCATORS RELINK CONFIRMATION END -->
+
+                <!-- EDUCATORS RELINK CONFIRMATION 2 -->
+                <div id="educators_relink_confirmation2" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_educators_relink_confirmation2">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.educators_relink_confirmation_message2 %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 30%; text-align: center;">
+                                <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="relink_close2" style="width: 100%; float: left;"><%= rc.close %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 64%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="relink_approve2" style="width: 100%; float: right;"><%= rc.save_new_subscription %></a>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- EDUCATORS RELINK CONFIRMATION 2 END -->
+
+                <!-- SSO ERROR -->
+                <div id="sso_error" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_error">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div" id="sso_generic_error_message" style="display: none;">
+                            <%= rc.sso_error_message %>
+                        </div>
+                        <div class="messages_div" id="sso_inactive_message" style="display: none;">
+                            <%= rc.sso_inactive_message %>
+                        </div>
+                        <div class="messages_div" id="sso_expired_message" style="display: none;">
+                            <%= rc.sso_expired_message %>
+                        </div>
+                        <div class="messages_div" id="sso_account_not_found_message" style="display: none;">
+                            <%= rc.sso_account_not_found_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- SSO ERROR END -->
+
+                <!-- MAM PREMIUM SUBSCRIPTION -->
+                <div id="mam_premium_subscription" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_mam_premium_subscription">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.mam_premium_subscription %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- MAM PREMIUM SUBSCRIPTION END -->
+
+                <!-- MAM BASIC SUBSCRIPTION -->
+                <div id="mam_basic_subscription" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_mam_basic_subscription">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.mam_basic_subscription %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- MAM BASIC SUBSCRIPTION END -->
+
+                <!-- MAM NOT LOGGED IN -->
+                <div id="mam_not_logged_in" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-half-spacer">
+                        <div class="close_panel inline_blocks" id="close_mam_not_logged_in">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.mam_not_logged_in %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-half-spacer"></div>
+                </div>
+                <!-- MAM NOT LOGGED IN END -->
+
+                <!-- SSO WHO ARE YOU -->
+                <div id="sso_who_are_you" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_who_are_you">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.sso_who_are_you %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_identify_student" style="width: 100%; float: left;"><%= rc.i_am_a_student %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_identify_teacher" style="width: 100%; float: right;"><%= rc.i_am_a_teacher %></a>
+                            </div>
+                        </div>
+
+                        <div class="utility-bar-vertical-spacer"></div>
+                        <div>
+                            <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_identify_not_now" style="width: 100%; float: left;"><%= rc.not_now %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 47%; text-align: center; vertical-align: top; padding-top: 10px;">
+                                <input type='checkbox' id='sso_who_are_you_dont_show_again' value=''><%= rc.sso_dont_show_again %>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- SSO WHO ARE YOU END -->
+
+                <!-- SSO I AM A STUDENT -->
+                <div id="sso_i_am_a_student" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_i_am_a_student">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane3"></div><!--
+                    --><div class="lefty panel-center-pane3">
+                        <div class="messages_div">
+                            <%= rc.sso_i_am_a_student_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane3"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane3"></div><!--
+                    --><div class="panel-center-pane3">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 42%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_student_has_account" style="width: 100%; float: left;"><%= rc.yes_use_old_account %></a>
+                            </div><!--
+                            --><div style="width: 6%; display: inline-block;"></div><!--
+                            --><div class="" style="display: inline-block; width: 52%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_student_no_account" style="width: 100%; float: right;"><%= rc.no_create_new_account %></a>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane3"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- SSO I AM A STUDENT END -->
+
+                <!-- SSO RESTRICTED -->
+                <div id="sso_restricted" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_restricted">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <%= rc.sso_restricted_message %>
+                        </div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div>
+                            <div class="" style="display: inline-block; width: 100%; text-align: center;">
+                                <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="sso_restricted_ok" style="width: 100%; float: left;"><%= rc.ok %></a>
+                            </div>
+                        </div>
+                        <div class="utility-bar-vertical-half-spacer"></div>
+                        <div>
+                            <div class="" style="display: inline-block; width: 100%; text-align: center; vertical-align: top; padding-top: 10px;">
+                                <input type='checkbox' id='sso_restricted_dont_show_again' value=''><%= rc.sso_dont_show_again %>
+                            </div>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- SSO RESTRICTED END -->
+
+                <!-- SSO TERMS OF USE -->
+                <div id="sso_terms_of_use" class="panel_containers" style="display: none;">
+                    <div class="utility-bar-top-spacer">
+                        <div class="close_panel inline_blocks" id="close_sso_terms_of_use">
+                            <a class="close_button_<%= rc.colorscheme %>" href="#"></a>
+                        </div>
+                    </div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="lefty panel-center-pane">
+                        <div class="messages_div">
+                            <input type='checkbox' id='chk_sso_terms_of_use' value=''><label for='chk_sso_terms_of_use'><%= rc.sso_terms_of_use_message %></label>
+                        </div>
+                        <div class="messages_div">
+                            <input type='checkbox' id='chk_sso_usage' value=''><label for='chk_sso_usage'><%= rc.sso_data_usage_message %></label>
+                        </div>
+                        <div id="sso_terms_of_use_not_approved" class="error_labels" style="display: none;"><%= rc.sso_terms_of_use_not_approved %></div>
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-vertical-spacer"></div>
+
+                    <div class="panel-left-pane"></div><!--
+                    --><div class="panel-center-pane">
+
+                        <div class="" style="display: inline-block; width: 47%; text-align: center;">
+                            <a href="#" class="buttons button2_<%= rc.colorscheme %>" id="terms_of_use_not_approved" style="width: 100%; float: left;"><%= rc.cancel %></a>
+                        </div><!--
+                        --><div style="width: 6%; display: inline-block;"></div><!--
+                        --><div class="" style="display: inline-block; width: 47%; text-align: center;">
+                            <a href="#" class="buttons button1_<%= rc.colorscheme %>" id="terms_of_use_approved" style="width: 100%; float: right;"><%= rc.approve %></a>
+                        </div>
+
+                    </div><!--
+                    --><div class="panel-right-pane"></div>
+
+                    <div class="utility-bar-bottom-spacer"></div>
+                </div>
+                <!-- SSO TERMS OF USE -->
+
+            </div>
+        <% } %>
+    </div>
+</script>
