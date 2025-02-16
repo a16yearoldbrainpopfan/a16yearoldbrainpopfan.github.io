@@ -1,0 +1,1709 @@
+@font-face {
+  font-family: "InterstateCondensed";
+  src: url("/core/resources/en/fonts/28075530-b532-4c8b-a7be-fd48f31acdd9-2.eot");
+  src: url("/core/resources/en/fonts/28075530-b532-4c8b-a7be-fd48f31acdd9-2.eot?") format("embedded-opentype"),
+       url("/core/resources/en/fonts/28075530-b532-4c8b-a7be-fd48f31acdd9-3.woff") format("woff"),
+       url("/core/resources/en/fonts/28075530-b532-4c8b-a7be-fd48f31acdd9-1.ttf") format("truetype"),
+       url('/core/resources/en/fonts/28075530-b532-4c8b-a7be-fd48f31acdd9-4.svg') format('svg');
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "InterstateBlack";
+  src: url("/core/resources/en/fonts/557c9ba6-e238-40e4-a4db-9a9c315d5229-2.eot");
+  src: url("/core/resources/en/fonts/557c9ba6-e238-40e4-a4db-9a9c315d5229-2.eot?") format("embedded-opentype"),
+       url("/core/resources/en/fonts/557c9ba6-e238-40e4-a4db-9a9c315d5229-3.woff") format("woff"),
+       url("/core/resources/en/fonts/557c9ba6-e238-40e4-a4db-9a9c315d5229-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: Normal;
+}
+
+.header{
+    font-family: "InterstateCondensed", arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+.header_esl{
+    font-size: 15px;
+    color: #FFF;
+}
+.header_jr{
+    font-size: 15px;
+    color: #FFF;
+}
+.header_esl .dynamic_info, .messages_div_esl .school_dynamic_info, .messages_div_esl .dynamic_info{
+    color: #78B2F2;
+}
+.header_jr .dynamic_info, .messages_div_jr .school_dynamic_info, .messages_div_jr .dynamic_info{
+    color: #ffcc66;
+}
+
+.utility_bar_container_bp{
+    min-width: 704px;
+}
+.utility_bar_container_bpjr{
+    min-width: 584px;
+}
+.utility_bar_container_bpjr_s{
+    min-width: 501px;
+}
+.utility_bar_container_bpesl{
+    min-width: 584px;
+}
+
+.utility_bar_inputs {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    height: 36px;
+    text-indent: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+.keyword{
+    height: 26px;
+}
+
+*+html .utility_bar_inputs {
+    width: 50%;
+}
+
+.search_bar_container{
+    width: 31%;
+    text-align: left;
+}
+.usermenu_container{
+    width: 69%;
+    text-align: right;
+}
+.inline_blocks{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: middle;
+}
+.utility_bar_labels {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.utility_bar_labels:hover {
+    color: #066;
+}
+.clickable{
+    cursor: pointer;
+}
+.log_in_container{
+    width: 69%;
+    text-align: right;
+}
+.small_panel_containers{
+    padding: 10px 18px 10px 18px;
+}
+.utility_bar_containers{
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.usermenu_spacer{
+    width: 25%;
+}
+.logout_container{
+    width: 50%;
+    text-align: right;
+}
+.utility-bar-info-panel, .messsage_container{
+    display: none;
+    font-family: arial, helvetica, sans-serif;
+    font-size: 13px;
+    text-align: left;
+    position: relative;
+}
+
+.single-pane{
+    padding: 0 18px 0 18px;
+}
+.panel-right-pane{
+    width: 25%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-center-pane{
+    width: 50%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-left-pane{
+    width: 25%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.panel-right-pane2{
+    width: 10%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-center-pane2{
+    width: 80%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-left-pane2{
+    width: 10%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.panel-right-pane3{
+    width: 20%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-center-pane3{
+    width: 60%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    vertical-align: top;
+}
+.panel-left-pane3{
+    width: 20%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.centerd{
+    text-align: center;
+}
+.lefty{
+    text-align: left;
+}
+
+.input_divs{
+    width: 100%;
+}
+
+.right-pane-error-lables{
+    padding: 3px 18px 0 18px;
+}
+
+.dynamic_info, .school_dynamic_info{
+    color: #f90;
+}
+
+.utility-bar-header{
+    font-family: "InterstateCondensed", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+.utility-bar-description-text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.utility-bar-vertical-spacer{
+    height: 18px;
+}
+.utility-bar-vertical-half-spacer{
+    height: 9px;
+}
+.utility-bar-horizontal-spacer{
+    width: 1.5%;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.utility-bar-top-spacer{
+    height: 27px;
+}
+.utility-bar-top-half-spacer{
+    height: 18px;
+}
+.utility-bar-bottom-spacer{
+    height: 27px;
+}
+.utility-bar-bottom-half-spacer{
+    height: 18px;
+}
+
+.captions{
+    font-weight: bold;
+}
+
+.buttons {
+    border-radius: 4px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-family: "InterstateCondensed", Arial, sans-serif;
+    font-size: 14px;
+    height: 34px;
+    letter-spacing: .1em;
+    line-height: 34px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+.utility_bar_small_buttons {
+    border-radius: 4px;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    font-family: "InterstateBlack", Arial, sans-serif;
+    font-size: 12px;
+    height: 26px;
+    letter-spacing: .1em;
+    line-height: 26px;
+    padding: 0 11px;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.small_button_none {
+    background: #0cc;
+    border: 1px solid #066;
+    color: #fff;
+}
+.small_button_none:hover {
+    background: #066;
+    text-decoration: none;
+}
+.small_button_none_selected{
+    background: #066;
+    cursor: default;
+}
+.utility_bar_info_panel_none{
+    background-color: #033;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.button1_none {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_none:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_none {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_none:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_educators_legacy{
+    background: #0cc;
+    border: 1px solid #066;
+    color: #fff;
+}
+.small_button_educators_legacy:hover {
+    background: #066;
+    text-decoration: none;
+}
+.small_button_educators_legacy_selected{
+    background: #066;
+    cursor: default;
+}
+.utility_bar_info_panel_educators_legacy{
+    background-color: #033;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 3px solid #11593C;
+    border-left: 3px solid #11593C;
+    border-right: 3px solid #11593C;
+}
+.button1_educators_legacy{
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_educators_legacy:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_educators_legacy{
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_educators_legacy:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_mybrainpop {
+    background: #0cc;
+    color: #066;
+}
+.small_button_mybrainpop:hover {
+    background: #066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_mybrainpop_selected{
+    background: #066;
+    cursor: default;
+    color: #fff;
+}
+.utility_bar_info_panel_mybrainpop{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 3px solid #6ffffe;
+    border-left: 3px solid #6ffffe;
+    border-right: 3px solid #6ffffe;
+}
+.button1_mybrainpop {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_mybrainpop:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_mybrainpop {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_mybrainpop:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_no_grid {
+    background: #0cc;
+    color: #066;
+}
+.small_button_no_grid:hover {
+    background: #066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_no_grid_selected{
+    background: #066;
+    cursor: default;
+    color: #fff;
+}
+.utility_bar_info_panel_no_grid{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 3px solid #333;
+    border-left: 3px solid #333;
+    border-right: 3px solid #333;
+}
+.button1_no_grid {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_no_grid:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_no_grid {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_no_grid:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_default {
+    background: #0cc;
+    color: #066;
+}
+.small_button_default:hover {
+    background: #066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_default_selected{
+    background: #066;
+    cursor: default;
+    color: #fff;
+}
+.utility_bar_info_panel_default{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 3px solid #00CCCC;
+    border-left: 3px solid #00CCCC;
+    border-right: 3px solid #00CCCC;
+}
+.button1_default {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_default:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_default {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_default:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_games {
+    background: #0cc;
+    color: #fff;
+}
+.small_button_games:hover {
+    background: #066;
+    text-decoration: none;
+}
+.small_button_games_selected{
+    background: #066;
+    cursor: default;
+}
+.utility_bar_info_panel_games{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    border-top: 3px solid #66ffff;
+    border-right: 3px solid #66ffff;
+    border-left: 3px solid #66ffff;
+}
+.button1_games {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_games:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_games {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_games:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_jr {
+    background: #ff9900;
+    color: #993300;
+}
+.small_button_jr:hover {
+    background: #ff9900;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_jr_selected{
+    background: #ff9900;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_jr{
+    background-color: #333;
+    color: #fff;
+    border-top: 3px solid #FF9900;
+    border-left: 3px solid #FF9900;
+    border-right: 3px solid #FF9900;
+}
+.button1_jr {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_jr:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_jr {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button2_jr:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+
+.small_button_esl {
+    background: #000033;
+    color: #ffffff;
+}
+.small_button_esl:hover {
+    background: #000033;
+    color: #76b1f5;
+    text-decoration: none;
+}
+.small_button_esl_selected{
+    background: #000033;
+    color: #76b1f5;
+    cursor: default;
+}
+.utility_bar_info_panel_esl{
+    background-color: #333;
+    color: #fff;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+.button1_esl {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_esl:hover {
+    background: #ff9901;
+    text-decoration: none;
+}
+.button2_esl {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button2_esl:hover {
+    background: #ff9901;
+    text-decoration: none;
+}
+
+.small_button_science {
+    background: #ccff66;
+    color: #336600;
+}
+.small_button_science:hover {
+    background: #336600;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_science_selected{
+    background: #336600;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_science{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #CCFF66;
+    border-left: 3px solid #CCFF66;
+    border-right: 3px solid #CCFF66;
+}
+.button1_science {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_science:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_science {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_science:hover {
+    background: #336600;
+    color:#fff;
+    text-decoration: none;
+}
+.small_button_science_inverted {
+    background: #99cc33;
+    color: #336600;
+}
+.small_button_science_inverted:hover {
+    background: #336600;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_science_inverted_selected{
+    background: #336600;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_science_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #99CC33;
+    border-left: 3px solid #99CC33;
+    border-right: 3px solid #99CC33;
+}
+.button1_science_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_science_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_science_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_science_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_socialstudies {
+    background: #ff9966;
+    color: #660000;
+}
+.small_button_socialstudies:hover {
+    background: #660000;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_socialstudies_selected{
+    background: #660000;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_socialstudies{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #FF9966;
+    border-left: 3px solid #FF9966;
+    border-right: 3px solid #FF9966;
+}
+.button1_socialstudies {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_socialstudies:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_socialstudies {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_socialstudies:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+.small_button_socialstudies_inverted {
+    background: #cc3300;
+    color: #660000;
+}
+.small_button_socialstudies_inverted:hover {
+    background: #660000;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_socialstudies_inverted_selected{
+    background: #660000;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_socialstudies_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #CC3300;
+    border-left: 3px solid #CC3300;
+    border-right: 3px solid #CC3300;
+}
+.button1_socialstudies_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_socialstudies_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_socialstudies_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_socialstudies_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_math {
+    background: #ff99ff;
+    color: #660066;
+}
+.small_button_math:hover {
+    background: #660066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_math_selected{
+    background: #660066;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_math{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #FF99FF;
+    border-left: 3px solid #FF99FF;
+    border-right: 3px solid #FF99FF;
+}
+.button1_math {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_math:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_math {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_math:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+.small_button_math_inverted {
+    background: #cc66cc;
+    color: #660066;
+}
+.small_button_math_inverted:hover {
+    background: #660066;
+    color:#fff;
+    text-decoration: none;
+}
+.small_button_math_inverted_selected{
+    background: #660066;
+    color:#fff;
+    cursor: default;
+}
+.utility_bar_info_panel_math_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #CC66CC;
+    border-left: 3px solid #CC66CC;
+    border-right: 3px solid #CC66CC;
+}
+.button1_math_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_math_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_math_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_math_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_health {
+    background: #ff9933;
+    color: #990000;
+}
+.small_button_health:hover {
+    background: #990000;
+    color: #ffffff;
+    text-decoration: none;
+}
+.small_button_health_selected{
+    background: #990000;
+    color: #ffffff;
+    cursor: default;
+}
+.utility_bar_info_panel_health{
+    background-color: #333;
+    color: #fff;
+    border-top: 3px solid #FF9933;
+    border-left: 3px solid #FF9933;
+    border-right: 3px solid #FF9933;
+}
+.button1_health {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_health:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_health {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_health:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+.small_button_health_inverted {
+    background: #ff6600;
+    color: #990000;
+}
+.small_button_health_inverted:hover {
+    background: #990000;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_health_inverted_selected{
+    background: #990000;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_health_inverted{
+    background-color: #333;
+    color: #fff;
+    border-top: 3px solid #FF6600;
+    border-left: 3px solid #FF6600;
+    border-right: 3px solid #FF6600;
+}
+.button1_health_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_health_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_health_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_health_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_artsandmusic {
+    background: #cc9966;
+    color: #663300;
+}
+.small_button_artsandmusic:hover {
+    background: #663300;
+    color:#fff;
+    text-decoration: none;
+}
+.small_button_artsandmusic_selected{
+    background: #663300;
+    color:#fff;
+    cursor: default;
+}
+.utility_bar_info_panel_artsandmusic{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #CC9966;
+    border-left: 3px solid #CC9966;
+    border-right: 3px solid #CC9966;
+}
+.button1_artsandmusic {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_artsandmusic:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_artsandmusic {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_artsandmusic:hover {
+    background: #990000;
+    color:#fff;
+    text-decoration: none;
+}
+.small_button_artsandmusic_inverted {
+    background: #996633;
+    color:#663300;
+}
+.small_button_artsandmusic_inverted:hover {
+    background: #663300;
+    color:#fff;
+    text-decoration: none;
+}
+.small_button_artsandmusic_inverted_selected{
+    background: #663300;
+    color:#fff;;
+    cursor: default;
+}
+.utility_bar_info_panel_artsandmusic_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #996633;
+    border-left: 3px solid #996633;
+    border-right: 3px solid #996633;
+}
+.button1_artsandmusic_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_artsandmusic_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_artsandmusic_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_artsandmusic_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_technology {
+    background: #9999ff;
+    color: #000066;
+}
+.small_button_technology:hover {
+    background: #000066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_technology_selected{
+    background: #000066;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_technology{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #9999FF;
+    border-left: 3px solid #9999FF;
+    border-right: 3px solid #9999FF;
+}
+.button1_technology {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_technology:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_technology {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_technology:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+.small_button_technology_inverted {
+    background: #6666cc;
+    color: #000066;
+}
+.small_button_technology_inverted:hover {
+    background: #000066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_technology_inverted_selected{
+    background: #000066;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_technology_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #6666CC;
+    border-left: 3px solid #6666CC;
+    border-right: 3px solid #6666CC;
+}
+.button1_technology_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_technology_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_technology_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_technology_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_english {
+    background: #ffff66;
+    color: #cc9900;
+}
+.small_button_english:hover {
+    background: #cc9900;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_english_selected{
+    background: #cc9900;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_english{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #ffff66;
+    border-left: 3px solid #ffff66;
+    border-right: 3px solid #ffff66;
+}
+.button1_english {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_english:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_english {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_english:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+.small_button_english_inverted {
+    background: #ffcc33;
+    color: #cc9900;
+}
+.small_button_english_inverted:hover {
+    background: #cc9900;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_english_inverted_selected{
+    background: #cc9900;
+    color: #fff;
+    cursor: default;
+}
+.utility_bar_info_panel_english_inverted{
+    background-color: #333;
+    color: white;
+    border-top: 3px solid #ffcc33;
+    border-left: 3px solid #ffcc33;
+    border-right: 3px solid #ffcc33;
+}
+.button1_english_inverted {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_english_inverted:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_english_inverted {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_english_inverted:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.small_button_educators {
+    background: #0cc;
+    color: #066;
+}
+.small_button_educators:hover {
+    background: #066;
+    color: #fff;
+    text-decoration: none;
+}
+.small_button_educators_selected{
+    background: #066;
+    cursor: default;
+    color: #fff;
+}
+.utility_bar_info_panel_educators{
+    background-color: #333;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+.button1_educators {
+    background: #ffad33;
+    background: -moz-linear-gradient(top, #ffad33 0%, #ffad33 50%, #ff9900 50%, #ff9900 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffad33), color-stop(50%,#ffad33), color-stop(50%,#ff9900), color-stop(100%,#ff9900));
+    background: -webkit-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -o-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: -ms-linear-gradient(top, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    background: linear-gradient(to bottom, #ffad33 0%,#ffad33 50%,#ff9900 50%,#ff9900 100%);
+    border: 1px solid #c60;
+    color: #fff;
+}
+.button1_educators:hover {
+    background: #ff9900;
+    text-decoration: none;
+}
+.button2_educators {
+    background: #f3f3f3;
+    background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 49%, #f3f3f3 50%, #f3f3f3 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(49%,#ffffff), color-stop(50%,#f3f3f3), color-stop(100%,#f3f3f3));
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -o-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    background: linear-gradient(to bottom, #ffffff 0%,#ffffff 49%,#f3f3f3 50%,#f3f3f3 100%);
+    border: 1px solid #ccc;
+    color: #666;
+}
+.button2_educators:hover {
+    background: #f3f3f3;
+    text-decoration: none;
+}
+
+.error_labels{
+    color: #f99;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    vertical-align: top;
+    max-height: 32px;
+}
+
+.update_labels{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.disabled{
+    opacity: 0.5;
+    cursor: default;
+}
+
+a.generic_links:link {color: #0cc; background-color: inherit; font-size: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links:visited {color: #0cc; background-color: inherit; font-size: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links:hover {color: #099; background-color: inherit; font-size: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links:active {color: #099; background-color: inherit; font-size: 13px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+
+a.generic_links_small:link {color: #0cc; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links_small:visited {color: #0cc; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links_small:hover {color: #099; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.generic_links_small:active {color: #099; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+
+.utility_bar_links_div{
+    text-align: right;
+    margin: 3px 0 3px 0;
+}
+a.utility_bar_links:link {color: #fff; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.utility_bar_links:visited {color: #fff; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.utility_bar_links:hover {color: #0cc; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+a.utility_bar_links:active {color: #0cc; background-color: inherit; font-size: 11px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; text-decoration: none;}
+
+a.generic_links_jr:link {color: #ffcc66;}
+a.generic_links_jr:visited {color: #ffcc66;}
+a.generic_links_jr:hover {color: #ffcc66; text-decoration: underline;}
+a.generic_links_jr:active {color: #ffcc66;}
+
+a.generic_links_esl:link {color: #78B2F2;}
+a.generic_links_esl:visited {color: #78B2F2;}
+a.generic_links_esl:hover {color: #78B2F2;text-decoration: underline;}
+a.generic_links_esl:active {color: #78B2F2;}
+
+.close_panel{
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    padding: 14px;
+    right: 0;
+    /*top: 14px;
+    right: 14px;
+    background-color: gray;
+    border-radius: 6px;
+    width: 16px;
+    text-align: center;
+    font-weight: bold;*/
+}
+
+.generic_login_message{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.dynamic_info{
+    font-weight: bold;
+}
+
+.close_button_mybrainpop, .close_button_none, .close_button_default, .close_button_educators, .close_button_games, .close_button_jr, .close_button_esl, .close_button_science_inverted, .close_button_science, .close_button_socialstudies_inverted, .close_button_socialstudies, .close_button_math_inverted, .close_button_math, .close_button_health_inverted, .close_button_health, .close_button_artsandmusic_inverted, .close_button_artsandmusic, .close_button_technology_inverted, .close_button_technology, .close_button_english_inverted, .close_button_english{
+    width: 9px;
+    height: 9px;
+    background: url('/core/resources/en/images/close.png') 0 0;
+    display: block;
+}
+.close_button_jr{
+    background: url('/core/resources/en/images/close-jr.png') 0 0;
+}
+.close_button_esl{
+    background: url('/core/resources/en/images/close-esl.png') 0 0;
+}
+.close_button_mybrainpop:hover, .close_button_none:hover, .close_button_default:hover, .close_button_educators:hover, .close_button_games:hover, .close_button_jr:hover, .close_button_esl:hover, .close_button_science_inverted:hover, .close_button_science:hover, .close_button_socialstudies_inverted:hover, .close_button_socialstudies:hover, .close_button_math_inverted:hover, .close_button_math:hover, .close_button_health_inverted:hover, .close_button_health:hover, .close_button_artsandmusic_inverted:hover, .close_button_artsandmusic:hover, .close_button_technology_inverted:hover, .close_button_technology:hover, :hover.close_button_english_inverted, .close_button_english:hover{
+    background-position: -9px 0;
+}
+
+.back-button{
+    width: 14px;
+    height: 12px;
+    margin-right: 7px;
+    border: 0;
+    position: relative;
+    top: 1px;
+}
+
+.buttons_images{
+    width: 26px;
+    height: 18px;
+    top: 4px;
+    position: relative;
+}
+
+.mbp-icons-container{
+    height: 55px;
+    width: 55px;
+    /*display: inline-block;*/
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.mbp_items_div{
+    text-align: center;
+    margin: 0 18px 0 18px;
+    min-height: 55px;
+}
+.mbp_items_div_fixed{
+    /*margin: 0 100px 0 100px;*/
+    margin: 0 50px 0 50px;
+}
+
+.mbp_item_div{
+    display: inline-block;
+    /*width: 33%;*/
+    cursor: pointer;
+    color: #fff;
+    font-family: "InterstateCondensed", arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: .05em;
+}
+
+.mbp_item_div:hover{
+    color: #0cc;
+}
+
+.mbp_item_div_brainpopjr:hover{
+    color: #cc6600;
+}
+.my_brainpop_panel_links{
+    width: 33%;
+    display: inline-block;
+}
+
+.mbp_item_div_fixed{
+    width: 49%;
+}
+
+.mbp_txt_item_div{
+    /*display: inline-block;*/
+    vertical-align: middle;
+    /*margin-left: 10px;*/
+    width: 100px;
+    text-align: left;
+    display: table-cell;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.mbp_txt_item_div:hover{
+    color: #0cc;
+}
+
+.mbp_txt_item_div_brainpopjr:hover{
+    color: #cc6600;
+}
+
+.mbp_item_div_brainpopesl:hover{
+    color: #78B2F2;
+}
+.mbp_txt_item_div_brainpopesl:hover{
+    color: #78B2F2;
+}
+
+.my-brainpop-icons{
+    width: 55px;
+    height: 55px;
+}
+
+
+
+/*
+.close_button_educators{
+    width: 9px;
+    height: 9px;
+    background: url('/core/resources/en/images/close.png') 18px 0;
+    display: block;
+}
+.close_button_educators:hover{
+  background-position: 27px 0;
+}
+*/
+
+@media only screen and (min-width: 1024px), only screen and (min-device-width: 1024px){
+    .panel_containers{
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
+/*
+     FILE ARCHIVED ON 15:26:00 Nov 30, 2016 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:48:19 Feb 16, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.491
+  exclusion.robots: 0.023
+  exclusion.robots.policy: 0.014
+  esindex: 0.009
+  cdx.remote: 49.124
+  LoadShardBlock: 993.052 (3)
+  PetaboxLoader3.datanode: 775.736 (4)
+  PetaboxLoader3.resolve: 174.236 (2)
+  load_resource: 130.168
+*/
