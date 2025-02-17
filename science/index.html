@@ -236,26 +236,36 @@
 </table><br>
 
 <!-- FOOTER -->
-<table align='center' width='744' id='footer_table'>
+<table align='center' width='100%' id='footer_table'>
 	<tr>
-		<td align="center" style="color: #FF9900;font-family: Arial, trebuchet, Verdana;font-size: 8pt;text-decoration: none;">
-			<script>
+		<td align="center" style="color: #000000;font-family: Arial, trebuchet, Verdana;font-size: 8pt;text-decoration: none;">
+			<style type="text/css">
+	.topic_footer_large{color: #CCFF66;font-size: 12pt;}
+	a.link_topic_footer_large:link {color: #336600;font-size: 12pt; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer_large:visited {color: #336600;font-size: 12pt; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer_large:hover {color: #FFFF99; font-size: 12pt; font-weight: bold; text-decoration: underline;}
+	a.link_topic_footer_large:active {color: #FFFF99; font-size: 12pt; font-weight: bold; text-decoration: none;}
+	.fake_link_topic_footer_large {color: #336600;font-size: 12pt; font-weight: bold; text-decoration: none;cursor: pointer;}
+	.fake_link_topic_footer_large:hover {color: #FFFF99; font-size: 12pt; font-weight: bold; text-decoration: underline;}
+	.fake_link_topic_footer_large:active {color: #FFFF99; font-size: 12pt; font-weight: bold; text-decoration: none;}
+	.topic_footer_less_large{color: #CCFF66;font-size: 12pt;}
+	a.link_topic_footer_less_large:link {color: #336600;font-size: 10pt; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer_less_large:visited {color: #336600;font-size: 10pt; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer_less_large:hover {color: #FFFF99; font-size: 10pt; font-weight: bold; text-decoration: underline;}
+	a.link_topic_footer_less_large:active {color: #FFFF99; font-size: 10pt; font-weight: bold; text-decoration: none;}
+	.topic_footer{color: #CCFF66;font-size: 8pt;}
+	a.link_topic_footer:link {color: #336600;font-size: 8p; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer:visited {color: #336600;font-size: 8pt; font-weight: bold; text-decoration: none;}
+	a.link_topic_footer:hover {color: #FFFF99; font-size: 8p; font-weight: bold; text-decoration: underline;}
+	a.link_topic_footer:active {color: #FFFF99; font-size: 8p; font-weight: bold; text-decoration: none;}
+</style>
+
+
+<script>
 $(document).ready(function(){
-	$("#cproducts").hover(
-	function(event){
-		$(this).addClass('link_user_footer_large_fake_hover');},
-	function(event){
-		$(this).removeClass('link_user_footer_large_fake_hover');
-	});
 	$("#cproducts").click(function(event){
 		$("#cfooter").hide();
 	    $("#cproducts_footer").fadeIn(1500);
-	});
-	$("#cback").hover(
-	function(event){
-		$(this).addClass('link_user_footer_large_fake_hover');},
-	function(event){
-		$(this).removeClass('link_user_footer_large_fake_hover');
 	});
 	$("#cback").click(function(event){
 		$("#cproducts_footer").hide();
